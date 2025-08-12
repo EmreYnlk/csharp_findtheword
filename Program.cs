@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Text.Json;
 
@@ -16,8 +16,8 @@ class Program
 
     static void Main()
     {
-
-        string path = "veri.json";
+        string basePath = AppDomain.CurrentDomain.BaseDirectory;
+        string path = Path.Combine(basePath, @"..\..\..\Properties\veri.json");
         string json = File.ReadAllText(path);
         List<veriler> liste = JsonSerializer.Deserialize<List<veriler>>(json);
         Console.WriteLine("-------------------------------------------------------------------------------");
