@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "isim": "Dogo Store",
+    "aciklama": "Dogo is a shoe and luxury  company",
+    "anahtar_kelime": "shoes bags"
+  },
+  {
+    "id": 2,
+    "isim": "ASD Bags",
+    "aciklama": "ASD Bags is a bag company",
+    "anahtar_kelime": "bag luxury"
+  },
+  {
+    "id": 3,
+    "isim": "BCD Computer",
+    "aciklama": "BCD is a technology company",
+    "anahtar_kelime": "computer internet"
+  },
+  {
+    "id": 4,
+    "isim": "DFG Phones",
+    "aciklama": "DFG is a technology company",
+    "anahtar_kelime": "phones cameras"
+  }
+
+]
