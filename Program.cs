@@ -22,34 +22,20 @@ class Program
         List<veriler> liste = JsonSerializer.Deserialize<List<veriler>>(json);
         Console.WriteLine("-------------------------------------------------------------------------------");
         foreach (var item in liste)
-        {
-            Console.WriteLine(item.id + " - " + item.isim + " - " + item.aciklama + " - " + item.anahtar_kelime);
-        }
+        {Console.WriteLine(item.id + " - " + item.isim + " - " + item.aciklama + " - " + item.anahtar_kelime);}
         Console.WriteLine("-------------------------------------------------------------------------------");
-
-
-            Console.WriteLine("Nasıl bir istekte bulunmaktasınız?");
+        Console.WriteLine("Nasıl bir istekte bulunmaktasınız?");
         string kabacumle = Console.ReadLine();
         Console.WriteLine("");
-     
-        
-
         string[] cumle_kelimeleri = kabacumle.Split(' ');
         cumle_kelimeleri = kelimeduzenle(cumle_kelimeleri);
 
         int[] yazilanid = new int[10];   // liste büyürse artırılmalı 
         int i = 0;
         foreach (var kelime in cumle_kelimeleri)
-        {
-            kelimeara(kelime);
-        }
-
-
-
+        {kelimeara(kelime);}
         void kelimeara(string cumle_kelimeleri) 
             {
-            
-            
             foreach (var item in liste) {
                 if (ayirma(item.anahtar_kelime, cumle_kelimeleri) || ayirma(item.isim, cumle_kelimeleri) || ayirma(item.aciklama, cumle_kelimeleri))
                 {
@@ -60,10 +46,6 @@ class Program
                     
                 }
             } }
-
-
-
-
         Boolean ayirma(string asd,string cumlekelimeleri) {
             string[] temp = asd.Split(" ");
             for (int i = 0; i < temp.Length; i++)
@@ -77,7 +59,6 @@ class Program
             }
             else {  return false; }
         }
-
         string[] kelimeduzenle(string[] yenidizi) {
 
             for(var i = 0; i<yenidizi.Length;i++)
